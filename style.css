@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, monospace;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  color: rgba(27, 27, 27, 0.863);
+}
+
+.top {
+  background: lightgrey;
+  margin: 50px auto;
+  width: 20%;
+}
+
+.top div {
+  margin: 10px auto;
+}
+
+#total {
+  font-size: 2em;
+}
+
+#totalIncome {
+  display: flex;
+  background: green;
+  text-align: left;
+  width: 70%;
+}
+
+#incomeValue {
+  padding-right: 46px;
+}
+
+#totalExpenses {
+  display: flex;
+  background: red;
+  text-align: left;
+  width: 70%;
+}
+
+#totalPercentage {
+  background: lightgray;
+  font-size: 0.5em;
+  line-height: 202%;
+  height: 100%;
+  width: 10%;
+  text-align: center;
+}
+
+.bar {
+  background: lightpink;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.barItem {
+  margin: 0 10px;
+}
+
+#description {
+  width: 25%;
+}
+
+#value {
+  width: 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  width: 50%;
+  background: lightgoldenrodyellow;
+}
+
+.container div {
+  flex-basis: 25%;
+}
+
+ul {
+  list-style-type: none;
+}

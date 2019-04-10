@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BudgetBuddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- ADD MASTER CSS FROM GITHUB -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top">
+      <div id="title">Available Budget in</div>
+      <div id="total">0</div>
+      <div id="totalIncome">
+        <div>INCOME</div>
+        <div id="incomeValue">+ 2,000</div>
+      </div>
+      <div id="totalExpenses">
+        <div>EXPENSES</div>
+        <div>- 1,500</div>
+        <div id="totalPercentage">40%</div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <select id="expenseType" class="barItem">
+        <option value="0">+</option>
+        <option value="1">-</option>
+      </select>
+      <input type="text" id="description" class="barItem" placeholder="Add your expense here.." />
+      <input type="number" id="value" class="barItem" placeholder="Value" />
+      <button id="enter" class="barItem">Go</button>
+    </div>
+
+    <div class="container">
+      <div id="left">
+        <div>INCOME</div>
+        <ul>
+          <li>..</li>
+          <li>..</li>
+        </ul>
+      </div>
+      <div id="left">
+        <div>EXPENSES</div>
+        <ul>
+          <li>..</li>
+          <li>..</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
