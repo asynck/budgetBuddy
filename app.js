@@ -54,19 +54,21 @@ function expenseEntry() {
     let description = document.getElementById("description").value;
     let value = document.getElementById("value").value;
     let type = document.getElementById("expenseType").options.selectedIndex;
+    let li = document.createElement("li");
+    let div1 = document.createElement("div");
+    let div2 = document.createElement("div");
     var expenseNew = new Entry(type, description, value);
     if (expenseNew.type == 0) {
         ul = document.getElementById("incomeList");
         incomeArr.push(expenseNew);
         expenseNew.value = '+' + expenseNew.value;
+        div2.style.color = "rgb(51, 192, 173)";
     } else {
         ul = document.getElementById("expensesList");
         expensesArr.push(expenseNew);
         expenseNew.value = '-' + expenseNew.value;
+        div2.style.color = "rgb(228, 55, 55)";
     }
-    let li = document.createElement("li");
-    let div1 = document.createElement("div");
-    let div2 = document.createElement("div");
     ul.appendChild(li);
     li.appendChild(div1);
     li.appendChild(div2);
@@ -91,5 +93,5 @@ function totalUpdate() {
 
     total.innerHTML = suma + sumb;
 
-    totalPercentage.innerHTML = (sumb/suma)*100 + "%";
+    totalPercentage.innerHTML = Math.trunc((sumb/suma)*100) + "%";
 }
