@@ -11,55 +11,110 @@ body {
   color: rgba(27, 27, 27, 0.863);
 }
 
+body::after {
+  content: "";
+  background: url(background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.border {
+  /* border: 1px solid rgba(252, 250, 250, 0.4); */
+  border-radius: 4px;
+}
+
 .top {
-  background: lightgrey;
-  margin: 50px auto;
-  width: 20%;
+  background: rgba(252, 250, 250, 0.4);
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 27%;
+  min-width: 443px;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
 }
 
 .top div {
   margin: 10px auto;
 }
 
+#title {
+  display: inline;
+}
+
+#month {
+  display: inline;
+}
+
 #total {
   font-size: 2em;
+  margin: 22px auto;
 }
 
 #totalIncome {
   display: flex;
-  background: green;
+  background: rgb(51, 192, 173);
   text-align: left;
   width: 70%;
 }
 
+#totalIncome div {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+#totalExpenses div {
+  flex-basis: 50%;
+  text-align: center;
+}
+
 #incomeValue {
-  padding-right: 46px;
+  /* padding-right: 46px; */
 }
 
 #totalExpenses {
   display: flex;
-  background: red;
+  background: rgb(228, 55, 55);
   text-align: left;
   width: 70%;
 }
 
 #totalPercentage {
-  background: lightgray;
+  background: #ebe5e5f2;
   font-size: 0.5em;
-  line-height: 202%;
-  height: 100%;
-  width: 10%;
+  line-height: 225%;
+  height: 16px;
+  width: 9%;
   text-align: center;
+  margin-top: 11px;
+  position: absolute;
+  top: 161px;
+  right: 86px;
+  width: 21px;
 }
 
 .bar {
-  background: lightpink;
-  width: 50%;
+  /* background: rgba(252, 250, 250, 0.4); */
+  width: 72%;
   margin: 50px auto;
 }
 
 .barItem {
   margin: 0 10px;
+}
+
+#expenseType {
+  width: 4%;
+  height: 23px;
 }
 
 #description {
@@ -75,13 +130,76 @@ body {
   justify-content: center;
   margin: 50px auto;
   width: 50%;
-  background: lightgoldenrodyellow;
+  font-weight: 500;
+  padding: 10px 0;
 }
 
+.green {
+  color: rgb(51, 192, 173);
+}
+
+.red {
+  color: rgb(228, 55, 55);
+}
+
+#left {
+  background: rgba(252, 250, 250, 0.6);
+  margin-right: 10px;
+}
+
+#right {
+  background: rgba(252, 250, 250, 0.6);
+  margin-left: 10px;
+}
+
+
 .container div {
-  flex-basis: 25%;
+  flex-basis: 42%;
+  text-align: inherit;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 ul {
   list-style-type: none;
+  padding-right: 40px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+li div {
+  white-space: nowrap; 
+  width: 95px; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+button {
+  border: 1px solid rgb(51, 192, 173);
+    width: 33px;
+    height: 27px;
+    margin: 0 8px;
+    border-radius: 4px;
+    color: #ffff;
+    font-size: 15px;
+    background-color: rgb(51, 192, 173);
+    cursor: pointer;
+    font-weight: 400;
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: rgb(35, 151, 136);
+  border: 1px solid rgb(35, 151, 136);
+}
+
+button:active {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: 0;
 }

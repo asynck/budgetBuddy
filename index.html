@@ -10,43 +10,39 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet" />
   </head>
   <body>
-    <div class="top">
-      <div id="title">Available Budget in</div>
-      <div id="total">0</div>
-      <div id="totalIncome">
+    <div class="top border">
+      <div id="title">Available Budget in <div id="month"></div> :</div>
+      <div id="total">...</div>
+      <div id="totalIncome" class="border">
         <div>INCOME</div>
-        <div id="incomeValue">+ 2,000</div>
+        <div id="incomeValue">...</div>
       </div>
-      <div id="totalExpenses">
+      <div id="totalExpenses" class="border">
         <div>EXPENSES</div>
-        <div>- 1,500</div>
-        <div id="totalPercentage">40%</div>
+        <div id="expensesValue">...</div>
       </div>
+      <div id="totalPercentage" class="border">...</div>
     </div>
 
     <div class="bar">
-      <select id="expenseType" class="barItem">
+      <select id="expenseType" class="barItem border">
         <option value="0">+</option>
         <option value="1">-</option>
       </select>
-      <input type="text" id="description" class="barItem" placeholder="Add your expense here.." />
-      <input type="number" id="value" class="barItem" placeholder="Value" />
-      <button id="enter" class="barItem">Go</button>
+      <input type="text" id="description" class="barItem border" placeholder=" Add a description.." />
+      <input type="number" id="value" class="barItem border" placeholder=" Value" />
+      <button id="enter" class="barItem border">Go</button>
     </div>
 
     <div class="container">
-      <div id="left">
-        <div>INCOME</div>
-        <ul>
-          <li>..</li>
-          <li>..</li>
+      <div id="left" class="border">
+        <div class="green">INCOME</div>
+        <ul id="incomeList">
         </ul>
       </div>
-      <div id="left">
-        <div>EXPENSES</div>
-        <ul>
-          <li>..</li>
-          <li>..</li>
+      <div id="right" class="border">
+        <div class="red">EXPENSES</div>
+        <ul id="expensesList">
         </ul>
       </div>
     </div>
